@@ -51,7 +51,6 @@ defmodule About do
     :ok
   end
 
-
   @doc """
   Regex:
 
@@ -82,6 +81,39 @@ defmodule About do
      c - charlist 
   """
   def sigils do
+    :ok
+  end
+
+  @doc """
+  The pipeline operator `|>` is used between two functions and 
+  uses the output from the first as the input to the second.
+  These can be chained.
+
+  iex> [3,2,1] |> Enum.sort() |> Enum.take(2)
+  [1, 2]
+  """
+  def pipeline do
+    :ok
+  end
+
+  @doc """
+  The official formatting is the result of `mix format FILENAME`
+  """
+  def formatting_code do
+    :ok
+  end
+
+  @doc"""
+  Useful websites:
+
+  * The language: https://elixir-lang.org/
+  * The forum: https://elixirforum.com/
+  * The school: https://elixirschool.com/en/
+  * The package mangement: https://hex.pm/
+  * Documentation: https://hexdocs.pm/
+  * The mentored exercism: https://exercism.io/my/tracks/elixir
+  """
+  def websites do
     :ok
   end
 
