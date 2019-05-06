@@ -12,7 +12,7 @@ defmodule About do
   """
 
   @doc """
-  Explains about.
+  Explains the About library.
 
   Usage:
 
