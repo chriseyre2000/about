@@ -34,8 +34,7 @@ defmodule About.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
+      {:ex_doc, "~> 0.14", only: :dev, runtime: false}
     ]
   end
 
@@ -44,7 +43,7 @@ defmodule About.MixProject do
       files: ~w(lib priv .formatter.exs mix.exs README* readme* LICENSE*
                 license* CHANGELOG* changelog* src),
       licenses: ["MPL 2.0"],
-      links: %{"GitHub" => "https://github.com/elixir-ecto/postgrex"}
+      links: %{"GitHub" => "https://github.com/chriseyre2000/about"}
     ]
   end
 end

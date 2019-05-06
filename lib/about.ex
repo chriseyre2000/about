@@ -2,24 +2,37 @@ defmodule About do
   @moduledoc """
   Adds documentation to iex.
 
+  These functions are not intended to be used at runtime, they only exist to provide documention.
+
   Topics include:
 
-  - defaults
   - regex
   - sigils
 
   """
 
+  @doc """
+  Explains about.
+
+  Usage:
+
+  iex > About.help
+  """
   def help do
     IO.puts """
-    This package adds documentat
+    This package adds documentatation to the iex utility.
+    It is loosly based upon the about_* topics that Powershell has in it's help.
     """
   end
 
   @doc """
-  Regex.
+  Regex:
 
-  Ipsum lorem 
+  Regex in Elixir can be specific using the ~r sigil:
+
+  ~r/Aa/
+
+  You can enable unicode support with: `~r/aPattern/u`
 
   """
   def regex do
@@ -29,7 +42,7 @@ defmodule About do
   @doc """
   Sigils.
 
-  Ipsum lorem 
+  ~r Regex
 
   """
   def sigils do
