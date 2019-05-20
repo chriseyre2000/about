@@ -26,8 +26,74 @@ defmodule About do
   end
 
   @doc """
-  Files, Functions and Variables are named in snake_case  
+  Building block of the system. These can be monitored, linked and restarted.
+  Much smaller than operating system equivalents. You can have 100K on a typical
+  machine.
+  """
+  def process(), do: :ok
+
+  @doc """
+  A resuable subsystem. For example logging is an application that 
+  would be used in many packages.
+  
+  Systems are deployed in Releases.
+  """
+  def application(), do: :ok
+
+  @doc """
+  Used for lifecycle management of processes and other supervisors.
+  Supervision trees provide application resiliance.
+  """
+  def supervisor(), do: :ok
+
+  @doc """
+  A defined set of applications intended to be deployed together.
+  This is the top level system.
+  """
+  def release(), do: :ok
+
+  @doc """
+  About provides help topics for things that are not library functions.
+
+  `iex > exports About` for a list of topics.
+  """
+  def about_About do
+    :ok
+  end
+
+  @doc """
+  Function parameters may be given defaults.
+
+  def foo(options \\ %{})
+  """
+  def defaults() do
+    :ok
+  end
+
+  @doc """
+  The Elixir/Erlang philosophy is unless you can handle an error "let it crash".
+ 
+  ```Don’t code defensively - Joe Armstrong```
+  (http://erlang.org/download/armstrong_thesis_2003.pdf)
+ 
+  Adding error handling that you can't recover from for something 
+  unexpected will mask bugs. Let it crash, log the error and let a 
+  supervisor restart the process in a clean state.
+
+  Elixir applications are usually constructed with supervisors (this is beyond the scope of these exercises):
+ 
+  https://elixir-lang.org/getting-started/mix-otp/supervisor-and-application.html
+
+  """
+  def let_it_crash() do
+    :ok
+  end
+
+  @doc """
+  ```
+  Files, Functions and Variables are named in snake_case.
   Modules are named in PascalCase
+  ```
 
   Functions that return only booleans (predicates) are named `xxx?`
 
@@ -43,11 +109,22 @@ defmodule About do
   end
 
   @doc """
-  Function parameters may be given defaults.
+  You can declare a function to be private by using defp.
 
-  def foo(options \\ %{})
+  This can only be used from within the module that it is declared.
+
+  If code is not needed outside the module then declare it defp.
+  This will help the compiler spot unused code and makes finding 
+  typos easier.
   """
-  def defaults() do
+  def private_functions, do: :ok
+
+  @doc """
+  You can use ctrl-C twice.
+
+  You can use ctrl-\ once
+  """
+  def quit_iex do
     :ok
   end
 
@@ -59,7 +136,6 @@ defmodule About do
   ~r/Aa/
 
   You can enable unicode support with: `~r/aPattern/u`
-
   """
   def regex do
     :ok
