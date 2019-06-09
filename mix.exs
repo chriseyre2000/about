@@ -4,7 +4,7 @@ defmodule About.MixProject do
   def project do
     [
       app: :about,
-      version: "0.0.3",
+      version: "0.0.5",
       elixir: "~> 1.8",
       description: description(),
       package: package(),

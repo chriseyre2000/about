@@ -89,6 +89,7 @@ defmodule About do
     :ok
   end
 
+
   @doc """
   ```
   Files, Functions and Variables are named in snake_case.
@@ -176,6 +177,18 @@ defmodule About do
   The official formatting is the result of `mix format FILENAME`
   """
   def formatting_code do
+    :ok
+  end
+
+  @doc """
+  You can match on strings in parameters:
+  ```
+  def foo(line = "*" <> _), do: ...
+  ```
+  This will allow you to match on strings that start with *, yet have the entire string.
+
+  """
+  def string_matching do
     :ok
   end
 
