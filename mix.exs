@@ -4,7 +4,7 @@ defmodule About.MixProject do
   def project do
     [
       app: :about,
-      version: "0.0.5",
+      version: "0.0.7",
       elixir: "~> 1.8",
       description: description(),
       package: package(),
@@ -41,7 +41,7 @@ defmodule About.MixProject do
   defp package() do
     [
       files: ~w(lib .formatter.exs mix.exs README*),
-      licenses: ["MPL 2.0"],
+      licenses: ["MPL-2.0"],
       links: %{"GitHub" => "https://github.com/chriseyre2000/about"}
     ]
   end

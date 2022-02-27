@@ -25,6 +25,19 @@ defmodule About do
     """
   end
 
+  def branching do
+    IO.puts """
+    There are five branching constructs.
+
+    if
+    unless
+    case
+    cond
+    with
+
+    """
+  end
+
   @doc """
   Building block of the system. These can be monitored, linked and restarted.
   Much smaller than operating system equivalents. You can have 100K on a typical
@@ -32,10 +45,25 @@ defmodule About do
   """
   def process(), do: :ok
 
+
   @doc """
-  A resuable subsystem. For example logging is an application that 
+  Phoenix is a commonly used web framwork.
+  The following steps help setup
+
+  mix local.hex
+  mix archive.install hex phx_new
+  docker run -d -e POSTGRES_PASSWORD=postgres -p 5432:5432 postgres:11
+  mix phx.new [PROJECT NAME]
+
+  Follow the instructions from there.
+
+  """
+  def phoneix_setup, do: :ok
+
+  @doc """
+  A resuable subsystem. For example logging is an application that
   would be used in many packages.
-  
+
   Systems are deployed in Releases.
   """
   def application(), do: :ok
@@ -72,16 +100,16 @@ defmodule About do
 
   @doc """
   The Elixir/Erlang philosophy is unless you can handle an error "let it crash".
- 
+
   ```Don’t code defensively - Joe Armstrong```
   (http://erlang.org/download/armstrong_thesis_2003.pdf)
- 
-  Adding error handling that you can't recover from for something 
-  unexpected will mask bugs. Let it crash, log the error and let a 
+
+  Adding error handling that you can't recover from for something
+  unexpected will mask bugs. Let it crash, log the error and let a
   supervisor restart the process in a clean state.
 
   Elixir applications are usually constructed with supervisors (this is beyond the scope of these exercises):
- 
+
   https://elixir-lang.org/getting-started/mix-otp/supervisor-and-application.html
 
   """
@@ -98,10 +126,10 @@ defmodule About do
 
   Functions that return only booleans (predicates) are named `xxx?`
 
-  The `is_` prefix is usually reserved for guard clauses (or for functions that 
+  The `is_` prefix is usually reserved for guard clauses (or for functions that
   may be used in a guard).
 
-  'Inner' helper functions are normally private (defp) and named do_xxx where xxx 
+  'Inner' helper functions are normally private (defp) and named do_xxx where xxx
   is the 'outer' function.
 
   """
@@ -115,7 +143,7 @@ defmodule About do
   This can only be used from within the module that it is declared.
 
   If code is not needed outside the module then declare it defp.
-  This will help the compiler spot unused code and makes finding 
+  This will help the compiler spot unused code and makes finding
   typos easier.
   """
   def private_functions, do: :ok
@@ -150,19 +178,19 @@ defmodule About do
   * ~c Charlists
   * ~w Wordlists ~w(first second third)
      This has three trailing modifiers that change the type:
-    
+
      a - atom
-    
+
      s - string
-    
-     c - charlist 
+
+     c - charlist
   """
   def sigils do
     :ok
   end
 
   @doc """
-  The pipeline operator `|>` is used between two functions and 
+  The pipeline operator `|>` is used between two functions and
   uses the output from the first as the input to the second.
   These can be chained.
 
