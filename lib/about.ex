@@ -58,7 +58,7 @@ defmodule About do
   Follow the instructions from there.
 
   """
-  def phoneix_setup, do: :ok
+  def phoenix_setup, do: :ok
 
   @doc """
   A resuable subsystem. For example logging is an application that
