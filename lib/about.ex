@@ -51,8 +51,11 @@ defmodule About do
   The following steps help setup
 
   mix local.hex
+
   mix archive.install hex phx_new
+
   docker run -d -e POSTGRES_PASSWORD=postgres -p 5432:5432 postgres:11
+
   mix phx.new [PROJECT NAME]
 
   Follow the instructions from there.
