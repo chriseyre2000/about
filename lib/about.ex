@@ -111,7 +111,7 @@ defmodule About do
   unexpected will mask bugs. Let it crash, log the error and let a
   supervisor restart the process in a clean state.
 
-  Elixir applications are usually constructed with supervisors (this is beyond the scope of these exercises):
+  Elixir applications are usually constructed with supervisors:
 
   https://elixir-lang.org/getting-started/mix-otp/supervisor-and-application.html
 
@@ -205,7 +205,7 @@ defmodule About do
   end
 
   @doc """
-  The official formatting is the result of `mix format FILENAME`
+  The official formatting is the result of `mix format FILENAME` or `mix format`
   """
   def formatting_code do
     :ok
@@ -231,7 +231,7 @@ defmodule About do
   * The school: https://elixirschool.com/en/
   * The package mangement: https://hex.pm/
   * Documentation: https://hexdocs.pm/
-  * The mentored exercism: https://exercism.io/my/tracks/elixir
+  * The mentored exercism: https://exercism.org/tracks/elixir
   """
   def websites do
     :ok

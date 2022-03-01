@@ -5,20 +5,23 @@ defmodule About.Types do
 
   @doc"""
   Integers in elixir are unlimited precision numbers.
+  This is limited only by memory.
 
   Example: 1
+
+  You can seperate digits with an underscore: 1_000_000
   """
   def integer(), do: :ok
 
   @doc """
   Floats in Elixir are 64-bit double precision.
- 
+
   Example: 1.2
   """
   def float(), do: :ok
 
   @doc """
-  Boolean had the values true and false. 
+  Boolean had the values true and false.
   These are identical to the atoms :true and :false
   """
   def boolean(), do: :ok
