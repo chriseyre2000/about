@@ -21,6 +21,11 @@ defmodule About.Types do
   def float(), do: :ok
 
   @doc """
+  number is either an integer or a float.
+  """
+  def number(), do: :ok
+
+  @doc """
   Boolean had the values true and false.
   These are identical to the atoms :true and :false
   """
@@ -54,5 +59,26 @@ defmodule About.Types do
   Example: [1, 2 ,3]
   """
   def list(), do: :ok
+
+  @doc """
+    %{}
+
+    %{a: "b", b: "c"}
+
+    %{"name" => "value", "count" => 17}
+  """
+  def map(), do: :ok
+
+  @doc """
+  Reference is an almost unique reference. Produced by make_ref/0
+  """
+  def reference(), do: :ok
+
+  @doc """
+  This is the hierachy of types for sorting:
+
+  number < atom < reference < function < port < pid < tuple < map < list < bitstring
+  """
+  def type_ordering(), do: :ok
 
 end
